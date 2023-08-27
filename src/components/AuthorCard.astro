@@ -25,25 +25,25 @@ import { Picture } from "@astrojs/image/components";
                     {"".padEnd(a.lastname.length + a.firstname.length + 3, "-")}
                 </li>
                 <li>
-                    <strong>OS:</strong>
-                    {` ${a.os}` || " OrchLinux"}
+                    <strong>OS :</strong>
+                    {` ${a.os}` || " MacOS"}
                 </li>
                 <li>
-                    <strong>Kernel:</strong> 6.0.19
+                    <strong>Stack :</strong> [PHP - JS - Vue.js - Laravel - etc...]
                 </li>
                 <li>
-                    <strong>Shell:</strong>
+                    <strong>Shell :</strong>
                     {` ${a.shell}` || " bash"}
                 </li>
                 <li>
-                    <strong>Theme:</strong> cmd_theme
+                    <strong>Passion :</strong> Code - Basket
                 </li>
             </ul>
             <ul>
                 {
                     a.socials.map((s) => (
                         <li>
-                            <strong>{s.name}: </strong>
+                            <strong>{s.name} : </strong>
                             <a
                                 href={s.link}
                                 rel="nofollow noreferrer"

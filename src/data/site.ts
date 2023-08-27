@@ -2,7 +2,7 @@ import type { ImageMetadata } from "@astrojs/image/dist/vite-plugin-astro-image"
 // @ts-ignore
 import image from "../assets/social.png";
 // @ts-ignore
-import pic from "../assets/ascii.png";
+import pic from "../assets/brian-alibali.png";
 
 export interface Author {
     firstname: string;
@@ -31,26 +31,34 @@ export interface Site {
 }
 
 export const site: Site = {
-    lang: "en",
-    rssTitle: "Onadrog's blog posts",
-    siteName: "Cmd_Theme",
-    title: "Welcome to my personal website.",
+    lang: "fr",
+    rssTitle: "Le blog de monbry",
+    siteName: "Brian Alibali | Développeur web Full Stack PHP & JS",
+    title: "Développeur web fullstack à Bordeaux.",
     description:
-        "This is my personal website, where I post news and some other cool stuff.",
+        "Bienvenue sur mon site personnel. Il fera office de portfolio et me permettra de partager des articles sur différents sujet.",
     image: image,
     twitterCreator: "",
     author: {
-        os: "ArchLinux",
+        os: "MacOS",
         profilePic: pic,
         shell: "Zsh",
-        bio: "I'm a web developer who loves making stuff and woodworking.",
-        firstname: "Sébastien",
-        lastname: "Gordano",
+        bio: "Je suis un développeur web, passionée par mon métier et le basket.",
+        firstname: "Brian",
+        lastname: "Alibali",
         socials: [
             {
-                name: "github",
-                link: "https://github.com/onadrog",
+                name: "Malt",
+                link: "https://www.malt.fr/profile/brianalibali",
             },
+            {
+                name: "Linkedin",
+                link: "https://www.linkedin.com/in/brian-alibali-developpeur-web/"
+            },
+            {
+                name: "Github",
+                link: "https://github.com/alibbali"
+            }
         ],
     },
 };

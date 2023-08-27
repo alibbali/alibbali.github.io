@@ -1,7 +1,6 @@
 .card-author {
     padding: 1em;
-    max-width: 69ch;
-    min-width: 40ch;
+    width: 750px;
     overflow: hidden;
     border-radius: 0.5em;
     text-align: start;
@@ -37,6 +36,10 @@
                 left: var(--length);
             }
         }
+    }
+
+    &--content {
+        text-align: center;
     }
 }
 .card-author--spec {

@@ -1,10 +1,15 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import AuthorCard from "../components/AuthorCard.astro";
 ---
 
-<BaseLayout title={"Home"} description={"Brian Alibali, Développeur Web FUll Stack"}>
+<BaseLayout title={"Accueil"} description={"Brian Alibali, Développeur Web FUll Stack"}>
     <Fragment slot="main">
-        <h1>Brian Alibali</h1>
-        <p>Full-Stack Developer</p>
+        <div class="presentation">
+            <h1>Brian Alibali</h1>
+            <p>Full-Stack Developer</p>
+        </div>
     </Fragment>
+
+    <AuthorCard slot="main" />
 </BaseLayout>
