@@ -1,33 +1,20 @@
 .footer {
-    grid-area: footer;
-    text-align: center;
-    display: grid;
-    gap: 0.5em;
-    grid-template-areas:
-        "contact links"
-        "copyright copyright";
-    padding: 1rem;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    place-items: center;
 
-    &-contact {
-        grid-area: contact;
-    }
-
-    &-links {
-        grid-area: links;
+    &-contacts {
+        .links {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 30px;
+            a {
+                padding: 5px;
+            }
+        }
     }
 
     &-copyright {
-        grid-area: copyright;
         display: grid;
-        grid-auto-flow: row;
-        gap: inherit;
-
-        a {
-            color: hsl(var(--accent));
-            font-weight: bold;
-        }
+        text-align: center;
+        place-items: center;   
+        padding: 1rem;
     }
 }

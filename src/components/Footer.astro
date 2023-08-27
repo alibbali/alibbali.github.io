@@ -6,34 +6,43 @@ const year = new Date().getFullYear();
 
 <footer class="footer">
     <address class="footer-contacts">
-        <a
+        <div class="links">
+            <a
             class="footer-links--github"
             target="_blank"
             rel="nofollow noopener noreferrer"
             aria-label="github"
-            href="https://github.com/onadrog"
+            href="https://github.com/alibbali"
         >
             <span class="sr-only">github</span>
             <Icon name="github" size={18} aria-hidden="true" />
         </a>
-    </address>
-    <p class="footer-links">
         <a
-            class="footer-links--rss"
-            href={getSiteURL("rss.xml", Astro.site).toString()}
+            class="footer-links--linkedin"
             target="_blank"
-            ><span class="sr-only">RSS Feed</span>
-            <Icon name="rss" size={18} aria-hidden="true" />
+            rel="nofollow noopener noreferrer"
+            aria-label="github"
+            href="https://www.linkedin.com/in/brian-alibali-developpeur-web/"
+        >
+            <span class="sr-only">linkedin</span>
+            <Icon name="linkedin" size={18} aria-hidden="true" />
         </a>
-    </p>
+        <a
+            class="footer-links--twitter"
+            target="_blank"
+            rel="nofollow noopener noreferrer"
+            aria-label="github"
+            href="https://twitter.com/Inbedlowbed"
+        >
+            <span class="sr-only">twitter</span>
+            <Icon name="twitter" size={18} aria-hidden="true" />
+        </a>
+        </div>
+    </address>
     <p class="footer-copyright">
         <span> &#xa9; 2019 - {year} Brian Alibali.</span>
-        <span class="footer-copyright--theme"
-            ><a
-                href="https://github.com/onadrog/cmd_theme"
-                rel="nofollow noopener noreferrer"
-                target="_blank">cmd_theme</a
-            > made with <span aria-hidden="true">&#9829;</span><span
+        <span class="footer-copyright--theme">
+            Theme made with <span aria-hidden="true">&#9829;</span><span
                 class="sr-only">love</span
             > by <a
                 href="https://github.com/onadrog"
