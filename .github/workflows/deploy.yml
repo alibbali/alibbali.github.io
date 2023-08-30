@@ -24,10 +24,10 @@ jobs:
         run: npm install pnpm && pnpm install --no-frozen-lockfile
       - name: Install, build, and upload your site
         uses: withastro/action@v0
-        # with:
-            # path: . # L'emplacement racine de votre projet Astro dans le dépôt. (facultatif)
-            # node-version: 16 # La version spécifique de Node qui doit être utilisée pour build votre site. La valeur par défaut est 16. (facultatif)
-            # package-manager: yarn # Le gestionnaire de paquets Node qui doit être utilisé pour installer les dépendances et build votre site. Détecté automatiquement en fonction de votre lockfile. (facultatif)
+        with:
+            path: .
+            node-version: 16
+            package-manager: pnpm
 
 
   deploy:
