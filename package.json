@@ -10,6 +10,7 @@
         "preview": "astro preview",
         "astro": "astro",
         "build:prev": "astro build && astro preview",
+        "ci:version": "pnpm changelog && pnpx changeset version && pnpm install --no-frozen-lockfile && git add .",
         "format": "prettier -w --plugin-search-dir=. ."
     },
     "devDependencies": {
