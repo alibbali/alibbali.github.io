@@ -20,14 +20,14 @@ jobs:
     steps:
       - name: Checkout your repository using git
         uses: actions/checkout@v2
-      - name: Setup Node.js
-        uses: actions/setup-node@v2
+      - name: Update lockfile
+        run: npm install pnpm && pnpm install --no-frozen-lockfile
+      - name: Install, build, and upload your site
+        uses: withastro/action@v0
         with:
-          node-version: 16
-      - name: Install pnpm
-        run: npm install -g pnpm@7.33.6
-      - name: Install dependencies
-        run: pnpm install --no-frozen-lockfile
+            path:
+            node-version: 16
+            package-manager: pnpm
 
 
   deploy:
