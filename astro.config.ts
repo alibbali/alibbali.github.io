@@ -11,7 +11,6 @@ import image from "@astrojs/image";
 // https://astro.build/config
 export default defineConfig({
     site: SITE_URL,
-    base: BASE_URL, 
     markdown: {
         shikiConfig: {
             theme: "dracula",
