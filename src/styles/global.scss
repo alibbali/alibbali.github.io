@@ -1,0 +1,25 @@
+@font-face {
+  font-family: 'VcrOsd';
+  src: url('/public/fonts/VCR_OSD_MONO_1.001.ttf');
+  font-weight: normal;
+  font-style: normal;
+  font-display: normal;
+}
+
+body {
+  background-color: #050f23;
+  color: white;
+  font-family: "VcrOsd";
+}
+
+a {
+  color: chocolate;
+}
+
+.menu a {
+  color: whitesmoke;
+  transition: color 400ms ease;
+  &:hover {
+    color: chocolate;
+  }
+}

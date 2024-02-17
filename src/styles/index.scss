@@ -1,0 +1,37 @@
+.home-cards {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute;
+    gap: 1rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    .card {
+        background-color: #050f23;
+        border: 1px solid whitesmoke;
+        padding: 20px;
+        transition: background-color 300ms ease;
+        height: auto;
+
+        li {
+            padding-left: 30px;
+        }
+
+        &:hover {
+            background-color: #05230a;
+        }
+        &:nth-child(1) {
+            width: 50%;
+        }
+        &:nth-child(2) {
+            width: 40%;
+        }
+        &:nth-child(n+3) {
+            width: 28.75%;
+        }
+    }
+
+}
