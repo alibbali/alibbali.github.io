@@ -1,0 +1,19 @@
+.contact-container {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    position: absolute;
+    gap: 1rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    p {
+        text-align: center;
+        a {
+            color: #ccc;
+        }
+    };
+}
