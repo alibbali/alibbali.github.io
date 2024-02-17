@@ -11,31 +11,35 @@ const posts = await getCollection("blog", ({ data }) => {
 	<section class="home-cards">
 		<div class="card">
 			<h1>Monbry</h1>
-			<p>Ma bio + mon CV</p>
-			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem et totam, tempora atque reprehenderit voluptas aliquam architecto quisquam velit tempore minus! Beatae praesentium quibusdam et nostrum dolorum? Tenetur, excepturi consequatur.</p>
-			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem et totam, tempora atque reprehenderit voluptas aliquam architecto quisquam velit tempore minus! Beatae praesentium quibusdam et nostrum dolorum? Tenetur, excepturi consequatur.</p>
+			<p>Artisan du web</p>
+			<p>Bienvenue sur mon site. Il a pour vocation première le fait d'historiser mes avancées sur certains de mes projets.</p>
+			<p>Je suis un solopreneur. J'ai l'objectif de vivre de mon travail, via des outils que je crée et que je mets à disposition sur le web, de manière gratuite ou payante.</p>
+			<p>Il a aussi pour but de me permettre d'écrire des articles sur différents sujets : code - architecture - société - sport - mes pensées.</p>
 		</div>
 		<div class="card">
 			<h3>Les liens utiles</h3>
 			<ul>
-				<li>Github</li>
-				<li>Malt</li>
-				<li>Linkedin</li>
-				<li>Twitter</li>
+				<li><a href="https://github.com/alibbali" target="_blank">Github</a></li>
+				<li><a href="https://www.malt.fr/profile/brianalibali" target="_blank">Malt</a></li>
+				<li><a href="https://www.linkedin.com/in/brian-alibali-developpeur-web/" target="_blank">Linkedin</a></li>
+				<li><a href="https://twitter.com/Inbedlowbed" target="_blank">Twitter</a></li>
 			</ul>
+			<hr>
+			<h3>La prhrase du moment que je retiens :</h3>
+			<p><i>Seul l'effort compte</i></p>
 		</div>
 		<div class="card">
 			<h3>Ces temps ci...</h3>
-			<ul>
-				<li>Musique : <a 
+			<ul class="list-this-moment">
+				<li>🎧 : <a 
 					href="https://open.spotify.com/intl-fr/track/58idGYBQkFbtazcZy7vBlg?si=acbca757afaa4772"
 					target="_blank"
 					>Solitude</a></li>
-				<li>Lecture : <a 
+				<li>📚 : <a 
 					href="https://fr.wikipedia.org/wiki/De_finibus_bonorum_et_malorum"
 					target="_blank"
-					>Le Bien et le Mal</a></li>
-				<li>Mathématiques : <a 
+					>De finibus III: Le Bien et le Mal</a></li>
+				<li>🔬 : <a 
 					href="https://brilliant.org/"
 					target="_blank
 					">Les graphes</a></li>
@@ -53,7 +57,7 @@ const posts = await getCollection("blog", ({ data }) => {
 			<h3>Mon blog</h3>
 			<ul>
 				{posts.map( (post) => <li>
-					<a href={`/blog/${post.slug}`}>{post.data.isPublished ? 'oui' : 'non'}</a>
+					<a href={`/blog/${post.slug}`}>{post.data.title}</a>
 					</li>)}
 				<li>et (bientôt) d'autres</li>
 			</ul>
