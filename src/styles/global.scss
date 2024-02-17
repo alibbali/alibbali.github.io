@@ -8,8 +8,12 @@
 
 body {
   background-color: #050f23;
-  color: white;
-  font-family: "VcrOsd";
+  color: #ccc;
+  font-family: "VcrOsd", monospace;
+  
+  p {
+   line-height: 1.3rem; 
+  }
 }
 
 a {

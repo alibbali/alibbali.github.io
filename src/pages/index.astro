@@ -1,8 +1,10 @@
 ---
 import { getCollection } from 'astro:content';
 import Layout from '../layouts/Layout.astro';
-import '../styles/index.scss'
-const posts = await getCollection("posts");
+import '../styles/index.scss';
+const posts = await getCollection("blog", ({ data }) => {
+	return data.isPublished === true
+});
 ---
 
 <Layout title="Le Bry - Je ne suis personne.">
@@ -25,15 +27,24 @@ const posts = await getCollection("posts");
 		<div class="card">
 			<h3>Ces temps ci...</h3>
 			<ul>
-				<li>Musique : <a href="https://open.spotify.com/intl-fr/track/58idGYBQkFbtazcZy7vBlg?si=acbca757afaa4772">Solitude</a></li>
-				<li>Lecture : <a href="https://fr.wikipedia.org/wiki/De_finibus_bonorum_et_malorum">Le Bien et le Mal</a></li>
-				<li>Mathématiques : <a href="https://brilliant.org/">Les graphes</a></li>
+				<li>Musique : <a 
+					href="https://open.spotify.com/intl-fr/track/58idGYBQkFbtazcZy7vBlg?si=acbca757afaa4772"
+					target="_blank"
+					>Solitude</a></li>
+				<li>Lecture : <a 
+					href="https://fr.wikipedia.org/wiki/De_finibus_bonorum_et_malorum"
+					target="_blank"
+					>Le Bien et le Mal</a></li>
+				<li>Mathématiques : <a 
+					href="https://brilliant.org/"
+					target="_blank
+					">Les graphes</a></li>
 			</ul>
 		</div>
 		<div class="card">
 			<h3>Mes projets du moment</h3>
 			<ul>
-				<li><a href="https://ott-gestion.com">Otto gestion</a> (en cours)</li>
+				<li><a href="https://otto-gestion.com" target="_blank">Otto gestion</a></li>
 				<li>Un annuaire pour les assoc. sportives</li>
 				<li>et d'autres...</li>
 			</ul>
@@ -41,8 +52,10 @@ const posts = await getCollection("posts");
 		<div class="card">
 			<h3>Mon blog</h3>
 			<ul>
-				<li>Article</li>
-				<li>et d'autres</li>
+				{posts.map( (post) => <li>
+					<a href={`/blog/${post.slug}`}>{post.data.isPublished ? 'oui' : 'non'}</a>
+					</li>)}
+				<li>et (bientôt) d'autres</li>
 			</ul>
 		</div>
 	</section>
