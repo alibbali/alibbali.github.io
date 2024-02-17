@@ -1,6 +1,8 @@
 ---
+import { getCollection } from 'astro:content';
 import Layout from '../layouts/Layout.astro';
 import '../styles/index.scss'
+const posts = await getCollection("posts");
 ---
 
 <Layout title="Le Bry - Je ne suis personne.">
@@ -24,16 +26,15 @@ import '../styles/index.scss'
 			<h3>Ces temps ci...</h3>
 			<ul>
 				<li>Musique : <a href="https://open.spotify.com/intl-fr/track/58idGYBQkFbtazcZy7vBlg?si=acbca757afaa4772">Solitude</a></li>
-				<li>Lecture : De la briévetè de la vie</li>
-				<li>Mathématiques : Les graphes</li>
+				<li>Lecture : <a href="https://fr.wikipedia.org/wiki/De_finibus_bonorum_et_malorum">Le Bien et le Mal</a></li>
+				<li>Mathématiques : <a href="https://brilliant.org/">Les graphes</a></li>
 			</ul>
 		</div>
 		<div class="card">
-			<h3>Mes projets en cours</h3>
+			<h3>Mes projets du moment</h3>
 			<ul>
-				<li>Otto gestion (en cours)</li>
-				<li>Project 2</li>
-				<li>Project 3</li>
+				<li><a href="https://ott-gestion.com">Otto gestion</a> (en cours)</li>
+				<li>Un annuaire pour les assoc. sportives</li>
 				<li>et d'autres...</li>
 			</ul>
 		</div>
@@ -41,8 +42,7 @@ import '../styles/index.scss'
 			<h3>Mon blog</h3>
 			<ul>
 				<li>Article</li>
-				<li>Article</li>
-				<li>Article</li>
+				<li>et d'autres</li>
 			</ul>
 		</div>
 	</section>
