@@ -6,13 +6,24 @@
   font-display: normal;
 }
 
+@font-face {
+  font-family: 'Code';
+  src: url('/fonts/fira-mono.regular.ttf');
+  font-weight: normal;
+  font-style: normal;
+  font-display: normal;
+}
+
 body {
   background-color: #050f23;
   color: #ccc;
-  font-family: "VcrOsd", monospace;
-  
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "Code", "VcrOsd", sans-serif;
+  height: auto;
   p {
-   line-height: 1.3rem; 
+   line-height: 2rem; 
   }
 }
 
@@ -30,11 +41,9 @@ a {
 
 
 footer {
-  position: absolute;
-  bottom: 20px;
-  margin: auto;
+  margin-top: 200px;
+  margin-bottom: 0;
   width: 100%;
-  
   p {
     text-align: center;
   }
