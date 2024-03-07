@@ -4,6 +4,7 @@
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
+    margin-top: 200px;
 
     .card {
         background-color: #050f23;
@@ -35,4 +36,21 @@
         }
     }
 
+}
+
+@media (max-width: 1080px) {
+    .home-cards {
+        display: flex;
+        padding: 0;
+        flex-direction: column;
+
+        .card {
+            width: 90%;
+            margin: auto;
+            &:nth-child(n) {
+                width: inherit;
+            }
+        }
+
+    }
 }

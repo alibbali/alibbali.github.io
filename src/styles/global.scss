@@ -17,7 +17,7 @@
 body {
   background-color: #050f23;
   color: #ccc;
-  height: 100%;
+  min-height: 100vh;
   margin: 0;
   padding: 0;
   font-family: "Code", "VcrOsd", sans-serif;
@@ -41,9 +41,11 @@ a {
 
 
 footer {
-  margin-top: 200px;
+  position: static;
+  bottom: 0;
   margin-bottom: 0;
-  width: 100%;
+  width: 90%;
+  margin: auto;
   p {
     text-align: center;
   }

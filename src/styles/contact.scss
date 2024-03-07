@@ -1,19 +1,20 @@
 .contact-container {
     width: 80%;
     margin: auto;
+    min-height: 850px;
     display: flex;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
     justify-content: center;
-    flex-wrap: wrap;
-    position: absolute;
-    gap: 1rem;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
 
-    p {
+    div {
         text-align: center;
         a {
             color: #ccc;
+            &:hover {
+                color: chocolate;
+            }
         }
     };
 }

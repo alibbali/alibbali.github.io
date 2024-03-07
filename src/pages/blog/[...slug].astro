@@ -13,7 +13,7 @@ const { entry } = Astro.props;
 const { Content } = await entry.render();
 ---
 <Layout title={entry.data.title}>
-  <section class="blog-post-container">
+  <article class="blog-post-container">
     <h1>{entry.data.title}</h1>
     <Content />
   </section>

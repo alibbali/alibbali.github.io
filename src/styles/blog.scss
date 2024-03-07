@@ -1,4 +1,4 @@
-.blog-post-container {
+article.blog-post-container {
     margin-top: 200px;
     padding: 20px;
     margin: auto;
@@ -9,5 +9,10 @@
         text-align: center;
         text-decoration: underline;
         line-height: normal;
+        font-size: xx-large;
+    }
+    p {
+        line-height: 2.5rem;
+        font-size: 20px;
     }
 }
